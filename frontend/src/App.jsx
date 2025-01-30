@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import BooksPage from './pages/BooksPage';
 import EBooksPage from './pages/EbooksPage';
 import PastPapersPage from './pages/PastPapersPage';
+import HelpPage from './pages/HelpPage';
 import ManageBook from './pages/ManageBook';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
@@ -53,6 +54,7 @@ const App = () => {
         <Route path="/books" element={<BooksPage />}/>
         <Route path="/ebooks" element={<EBooksPage />} /> 
         <Route path="/past-papers" element={<PastPapersPage />} />
+        <Route path="/help" element={<HelpPage />} />
         <Route path="/manage-book" element={<ManageBook />}/>
       </Routes>
     </ThemeProvider>

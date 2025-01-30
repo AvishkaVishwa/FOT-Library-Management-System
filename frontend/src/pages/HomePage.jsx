@@ -121,6 +121,9 @@ const HomePage = () => {
             >
               Contact Us
             </MuiLink>
+            <MuiLink href="/help" underline="none" sx={{ marginRight: 2, color: 'white' }}>
+              Help
+            </MuiLink>
             {userName ? (
               <>
                 <Typography variant="body1" sx={{ marginRight: 2 }}>
