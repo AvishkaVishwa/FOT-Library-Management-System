@@ -59,6 +59,7 @@ const HomePage = () => {
     });
   };
 
+  
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth={false} style={{ padding: 0 }}>
@@ -223,49 +224,51 @@ const HomePage = () => {
             </Grid>
 
             <Grid item xs={12} sm={6} md={3}>
-              <Card
-                sx={{
-                  cursor: 'pointer',
-                  boxShadow: 6,
-                  transition: 'transform 0.3s',
-                  '&:hover': { transform: 'scale(1.05)' },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="300"
-                  image="https://ebookreadersoftware.wordpress.com/wp-content/uploads/2012/05/publish-ebooks.jpg"
-                  alt="Guidelines"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    E-Books
-                  </Typography>
-                </CardContent>
-              </Card>
+            <Card
+            onClick={() => navigate('/ebooks')}  // Navigate to the E-Books Page
+            sx={{
+            cursor: 'pointer',
+            boxShadow: 6,
+            transition: 'transform 0.3s',
+            '&:hover': { transform: 'scale(1.05)' },
+            }}
+            >
+            <CardMedia
+            component="img"
+            height="300"
+            image="https://ebookreadersoftware.wordpress.com/wp-content/uploads/2012/05/publish-ebooks.jpg"
+            alt="E-Books"
+            />
+            <CardContent>
+            <Typography variant="h5" component="div">
+            E-Books
+            </Typography>
+            </CardContent>
+            </Card>
             </Grid>
 
             <Grid item xs={12} sm={6} md={3}>
-              <Card
-                sx={{
-                  cursor: 'pointer',
-                  boxShadow: 6,
-                  transition: 'transform 0.3s',
-                  '&:hover': { transform: 'scale(1.05)' },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="300"
-                  image="https://cothamschoolenglish.weebly.com/uploads/8/3/5/4/83549726/past-papers_2.png"
-                  alt="Staff"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    Past Papers
-                  </Typography>
-                </CardContent>
-              </Card>
+            <Card
+            onClick={() => navigate('/past-papers')}  // Navigate to the Past Papers Page
+            sx={{
+            cursor: 'pointer',
+            boxShadow: 6,
+            transition: 'transform 0.3s',
+            '&:hover': { transform: 'scale(1.05)' },
+            }}
+            >
+            <CardMedia
+            component="img"
+            height="300"
+            image="https://cothamschoolenglish.weebly.com/uploads/8/3/5/4/83549726/past-papers_2.png"
+            alt="Past Papers"
+            />
+            <CardContent>
+            <Typography variant="h5" component="div">
+            Past Papers
+            </Typography>
+            </CardContent>
+            </Card>
             </Grid>
           </Grid>
         </Container>
