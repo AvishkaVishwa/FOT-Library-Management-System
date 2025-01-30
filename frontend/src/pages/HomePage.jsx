@@ -202,78 +202,109 @@ const HomePage = () => {
             Categories
           </Typography>
           <Grid container mt={2} spacing={4} justifyContent="center">
-            <Grid item xs={12} sm={6} md={3}>
-              <Card
-                onClick={() => navigate('/books')}
-                sx={{
-                  cursor: 'pointer',
-                  boxShadow: 6,
-                  transition: 'transform 0.3s',
-                  '&:hover': { transform: 'scale(1.05)' },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="300"
-                  image="https://www.vedantu.com/seo/content-images/c03fc31a-b1fc-4c5f-af6b-40cb5e2c94aa.jpg"
-                  alt="Books"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    Books
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+  {/* Books Card */}
+  <Grid item xs={12} sm={6} md={3}>
+    <Card
+      onClick={() => navigate('/books')}
+      sx={{
+        cursor: 'pointer',
+        boxShadow: 6,
+        transition: 'transform 0.3s',
+        '&:hover': { transform: 'scale(1.05)' },
+      }}
+    >
+      <CardMedia
+        component="img"
+        height="300"
+        image="https://www.vedantu.com/seo/content-images/c03fc31a-b1fc-4c5f-af6b-40cb5e2c94aa.jpg"
+        alt="Books"
+      />
+      <CardContent>
+        <Typography variant="h5" component="div">
+          Books
+        </Typography>
+      </CardContent>
+    </Card>
+  </Grid>
 
-            <Grid item xs={12} sm={6} md={3}>
-            <Card
-            onClick={() => navigate('/ebooks')}  // Navigate to the E-Books Page
-            sx={{
-            cursor: 'pointer',
-            boxShadow: 6,
-            transition: 'transform 0.3s',
-            '&:hover': { transform: 'scale(1.05)' },
-            }}
-            >
-            <CardMedia
-            component="img"
-            height="300"
-            image="https://ebookreadersoftware.wordpress.com/wp-content/uploads/2012/05/publish-ebooks.jpg"
-            alt="E-Books"
-            />
-            <CardContent>
-            <Typography variant="h5" component="div">
-            E-Books
-            </Typography>
-            </CardContent>
-            </Card>
-            </Grid>
+  {/* E-Books Card */}
+  <Grid item xs={12} sm={6} md={3}>
+    <Card
+      onClick={() => {
+        const token = localStorage.getItem('token'); // Check if user is authenticated
+        if (!token) {
+          Swal.fire({
+            title: 'Login Required',
+            text: 'Please log in to access E-Books.',
+            icon: 'warning',
+            confirmButtonText: 'Login',
+          }).then(() => {
+            navigate('/login'); // Redirect to login page
+          });
+        } else {
+          navigate('/ebooks'); // Navigate to E-Books page
+        }
+      }}
+      sx={{
+        cursor: 'pointer',
+        boxShadow: 6,
+        transition: 'transform 0.3s',
+        '&:hover': { transform: 'scale(1.05)' },
+      }}
+    >
+      <CardMedia
+        component="img"
+        height="300"
+        image="https://ebookreadersoftware.wordpress.com/wp-content/uploads/2012/05/publish-ebooks.jpg"
+        alt="E-Books"
+      />
+      <CardContent>
+        <Typography variant="h5" component="div">
+          E-Books
+        </Typography>
+      </CardContent>
+    </Card>
+  </Grid>
 
-            <Grid item xs={12} sm={6} md={3}>
-            <Card
-            onClick={() => navigate('/past-papers')}  // Navigate to the Past Papers Page
-            sx={{
-            cursor: 'pointer',
-            boxShadow: 6,
-            transition: 'transform 0.3s',
-            '&:hover': { transform: 'scale(1.05)' },
-            }}
-            >
-            <CardMedia
-            component="img"
-            height="300"
-            image="https://cothamschoolenglish.weebly.com/uploads/8/3/5/4/83549726/past-papers_2.png"
-            alt="Past Papers"
-            />
-            <CardContent>
-            <Typography variant="h5" component="div">
-            Past Papers
-            </Typography>
-            </CardContent>
-            </Card>
-            </Grid>
-          </Grid>
+  {/* Past Papers Card */}
+  <Grid item xs={12} sm={6} md={3}>
+    <Card
+      onClick={() => {
+        const token = localStorage.getItem('token'); // Check if user is authenticated
+        if (!token) {
+          Swal.fire({
+            title: 'Login Required',
+            text: 'Please log in to access Past Papers.',
+            icon: 'warning',
+            confirmButtonText: 'Login',
+          }).then(() => {
+            navigate('/login'); // Redirect to login page
+          });
+        } else {
+          navigate('/past-papers'); // Navigate to Past Papers page
+        }
+      }}
+      sx={{
+        cursor: 'pointer',
+        boxShadow: 6,
+        transition: 'transform 0.3s',
+        '&:hover': { transform: 'scale(1.05)' },
+      }}
+    >
+      <CardMedia
+        component="img"
+        height="300"
+        image="https://cothamschoolenglish.weebly.com/uploads/8/3/5/4/83549726/past-papers_2.png"
+        alt="Past Papers"
+      />
+      <CardContent>
+        <Typography variant="h5" component="div">
+          Past Papers
+        </Typography>
+      </CardContent>
+    </Card>
+  </Grid>
+</Grid>
         </Container>
 
         {/* About Section */}
