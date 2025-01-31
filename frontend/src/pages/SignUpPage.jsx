@@ -48,8 +48,13 @@ const SignupPage = () => {
     validationSchema: Yup.object({
       firstName: Yup.string().required('First name is required'),
       lastName: Yup.string().required('Last name is required'),
-      email: Yup.string().email('Invalid email address').required('Email is required'),
-      password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+      email: Yup.string()
+        .email('Invalid email address')
+        .matches(/^[a-zA-Z0-9._%+-]+@stu\.cmb\.ac\.lk$/, 'Email must be in the format @stu.cmb.ac.lk')
+        .required('Email is required'),
+      password: Yup.string()
+        .min(6, 'Password must be at least 6 characters')
+        .required('Password is required'),
       index: Yup.string().required('Index number is required'),
     }),
     onSubmit: async (values) => {
