@@ -24,13 +24,23 @@ To install and set up the project, follow these steps:
 3. Install the necessary dependencies:
     ```sh
     npm install
+4. Navigate to the frontend 
+    ```sh
+    cd frontend
     ```
-
-## Usage
-To start the application in development mode, run:
+5. To start the frontend, run:
 ```sh
 npm start
 ```
+6. Navigate to the backend 
+    ```sh
+    cd backend
+    ```
+7. To start the backend, run:
+```sh
+npm start
+```
+
 This will run the app and open [http://localhost:3000](http://localhost:3000) in your browser. The page will reload when you make changes.
 
 To run tests:
@@ -68,5 +78,4 @@ Contributions are welcome! Follow these steps to contribute:
     ```
 6. Open a Pull Request.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
