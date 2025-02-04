@@ -29,17 +29,17 @@ To install and set up the project, follow these steps:
     cd frontend
     ```
 5. To start the frontend, run:
-```sh
-npm start
-```
+   ```sh
+   npm start
+   ```
 6. Navigate to the backend 
     ```sh
     cd backend
     ```
 7. To start the backend, run:
-```sh
-npm start
-```
+    ```sh
+    npm start
+    ```
 
 This will run the app and open [http://localhost:3000](http://localhost:3000) in your browser. The page will reload when you make changes.
 
